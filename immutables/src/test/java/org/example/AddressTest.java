@@ -81,7 +81,7 @@ class AddressTest {
             Assertions.assertDoesNotThrow(()->
              ImmutableAddressOnlyForHarburg.builder().housenumber("test")
                     .zipCode("21073")
-                    .namge("test")
+                    .name("test")
                     .street("test")
                     .build(),"Does not throw because zipCode is correct");
         }
