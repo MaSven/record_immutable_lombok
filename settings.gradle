@@ -1,0 +1,4 @@
+rootProject.name = 'record_immutable_lombok'
+include 'immutables'
+
+

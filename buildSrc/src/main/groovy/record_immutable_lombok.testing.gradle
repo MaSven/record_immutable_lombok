@@ -1,0 +1,38 @@
+plugins{
+    id  'java'
+    id "org.assertj.generator"
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+
+assertJ {
+
+}
+
+sourceSets{
+    main {
+        assertJ {
+
+        }
+
+    }
+    test{
+        java.srcDirs += 'build/generated-src/test/java/'
+    }
+}
+
+dependencies{
+    testImplementation("org.assertj:assertj-core:3.18.1")
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'com.github.trickl:assertj-json:0.2.14'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}

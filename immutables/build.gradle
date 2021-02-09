@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id 'record_immutable_lombok.testing'
+    id 'record_immutable_lombok.serialization'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+def immutablesversion = "2.8.2"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor "org.immutables:value:$immutablesversion"
+    compileOnly "org.immutables:value:$immutablesversion"
+
+}
+
